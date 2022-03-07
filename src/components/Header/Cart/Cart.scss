@@ -1,0 +1,70 @@
+@import '../../../style/mixing.scss';
+
+.shopping-cart {
+    position        : absolute;
+    top             : 110%;
+    right           : -110%;
+    width           : 35rem;
+    padding         : 1rem;
+    border-radius   : .5rem;
+    background-color: var(--white);
+    box-shadow      : var(--boxShadow);
+    transition      : .3s ease;
+
+    &.userClick {
+        right: 2rem;
+    }
+
+    .box {
+        display      : flex;
+        align-items  : center;
+        gap          : 1rem;
+        position     : relative;
+        margin       : 1rem 0;
+        border-bottom: var(--border);
+
+        img {
+            height: 10rem;
+        }
+
+        .fa-trash {
+            position : absolute;
+            top      : 50%;
+            right    : 2rem;
+            transform: translateY(-50%);
+            cursor   : pointer;
+            @include fontStyle(2rem, var(--lightColor));
+
+            &:hover {
+                color: tomato;
+            }
+        }
+
+        .content {
+            h3 {
+                @include fontStyle(1.8rem, var(--black));
+                padding-bottom: .8rem;
+            }
+
+            span {
+                @include fontStyle(1.8rem, var(--lightColor));
+            }
+
+            .quantity {
+                padding-left: 2.5rem;
+            }
+        }
+    }
+
+    .total {
+        text-align: center;
+        padding   : 1rem 0;
+        @include fontStyle(2.5rem, var(--black));
+    }
+
+    .btn {
+        display   : block;
+        text-align: center;
+        margin    : 1rem;
+    }
+}

@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* 7 - Mar - 2022 */
+
+:root {
+    --themeColor  : #ff7800;
+    --black       : #130f40;
+    --lightColor  : #666;
+    --bgWhite     : #eee;
+    --white       : #fff;
+    --border      : .2rem solid rgba(0, 0, 0, .1);
+    --outline     : .1rem solid rgba(0, 0, 0, .1);
+    --outlineHover: .2rem solid var(--black);
+    --boxShadow   : 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+
+* {
+    margin         : 0;
+    padding        : 0;
+    border         : 0;
+    outline        : none;
+    list-style     : none;
+    user-select    : none;
+    text-decoration: none;
+    text-transform : capitalize;
+    box-sizing     : border-box;
+    font-family    : 'Poppins', sans-serif;
+    transition     : all .1s linear;
+}
+
+@import 'mixing';
+
+
+/*
+    100% / 16px = 6.25%
+    6.25% == 1px 
+
+    6.25% * 10 = 62.5% 
+    62.5% == 10px
+*/
+html {
+    font-size         : 62.5%;
+    overflow-x        : hidden;
+    scroll-behavior   : smooth;
+    scroll-padding-top: 7rem;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--themeColor);
+    }
+}
+
+body {
+    background-color: var(--bgWhite);
+}
+
+/* 
+Style Scale for all 
+but in responsive - its resizing at 991px
+*/
+header,
+section {
+    padding      : 2rem 9%;
+    margin-bottom: 3rem;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.heading {
+    text-align: center;
+    padding   : 2rem 0 3rem;
+    @include fontStyle(3.5rem, var(--black));
+
+    span {
+        background-color: var(--themeColor);
+        display         : inline-block;
+        padding         : 0.5rem 3rem;
+        color           : #FFF;
+        clip-path       : polygon(100% 0,
+                93% 50%,
+                100% 99%,
+                0% 100%,
+                7% 50%,
+                0% 0%, )
+    }
+}
+
+.btn {
+    margin-top   : 1rem;
+    padding      : 0.5rem 2.5rem;
+    display      : inline-block;
+    cursor       : pointer;
+    background   : none;
+    border-radius: .5rem;
+    border       : .2rem solid var(--black);
+    @include fontStyle(1.8rem, var(--black));
+
+    &:hover {
+        @include hover;
+    }
+}
+
+
+
+
+/*  Customize Swiper Slider Style
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+*/
+.swiper {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        opacity: .2;
+        color  : var(--themeColor);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        background-color: var(--themeColor);
+    }
+
+    .swiper-button-next {
+        top  : 22rem;
+        right: 2.5rem;
+    }
+
+    .swiper-button-prev {
+        top : 22rem;
+        left: 2.5rem;
+    }
+}
+/*reverse order btn positioning...*/
+div[dir="rtl"] {
+    .swiper-button-next {
+        left : 2.5rem;
+        right: auto;
+    }
+
+    .swiper-button-prev {
+        right: 2.5rem;
+    }
+}
+
+
+@import 'responsive.scss';

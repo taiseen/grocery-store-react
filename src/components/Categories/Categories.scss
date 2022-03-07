@@ -1,0 +1,38 @@
+@import '../../style/mixing.scss';
+
+.categories {
+
+    .box-container {
+
+        @include grid(26rem);
+
+        .categoryBox {
+            text-align      : center;
+            padding         : 3rem 2rem;
+            outline         : var(--outline);
+            outline-offset  : -1rem;
+            background-color: var(--white);
+            border-radius   : .5rem;
+
+            &:hover {
+                @include outLineHover;
+            }
+
+            img {
+                margin: 1rem 0;
+                height: 15rem;
+            }
+
+            h3 {
+                @include fontStyle(2rem, var(--black));
+                line-height: 1.8;
+            }
+
+            p {
+                @include fontStyle(1.8rem, var(--lightColor));
+                line-height: 1.8;
+                padding    : 1rem 0;
+            }
+        }
+    }
+}

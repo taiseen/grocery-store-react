@@ -1,0 +1,36 @@
+@import '../../style/mixing.scss';
+
+.features {
+
+    .box-container {
+        @include grid(30rem);
+
+        .featuresBox {
+            padding         : 4rem 2rem;
+            background-color: #fff;
+            outline         : var(--outline);
+            outline-offset  : -1rem;
+            text-align      : center;
+
+            &:hover {
+                @include outLineHover;
+            }
+
+            img {
+                margin: 1rem 0;
+                height: 15rem;
+            }
+
+            h3 {
+                line-height: 1.8;
+                @include fontStyle(2.5rem, var(--black));
+            }
+
+            p {
+                line-height: 1.8;
+                padding    : 1rem 0;
+                @include fontStyle(1.5rem, var(--lightColor));
+            }
+        }
+    }
+}

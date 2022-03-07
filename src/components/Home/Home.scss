@@ -1,0 +1,31 @@
+@import '../../style/mixing.scss';
+
+.home {
+    display            : flex;
+    align-items        : center;
+    justify-content    : center;
+    background         : url(../../assets/banner-bg.webp);
+    background-position: center;
+    background-size    : cover;
+    padding            : 17rem 0 10rem;
+
+    .content {
+        text-align: center;
+        max-width : 60rem;
+        padding   : 1.5rem;
+
+        h3 {
+            @include fontStyle(3rem, var(--black));
+
+            span {
+                color: var(--themeColor);
+            }
+        }
+
+        p {
+            @include fontStyle(1.8rem, var(--lightColor));
+            padding    : 1rem 0;
+            line-height: 1.8;
+        }
+    }
+}
