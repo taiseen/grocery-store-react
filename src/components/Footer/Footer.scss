@@ -1,0 +1,105 @@
+@import '../../style/mixing.scss';
+
+.footer {
+
+    background-color: var(--white);
+
+    .footer-container {
+        @include grid(25rem);
+
+        .box {
+
+            &:nth-child(2) .links:nth-child(3) {
+                text-transform: lowercase;
+            }
+
+            h3 {
+                @include fontStyle(2.2rem, var(--black));
+                padding: 1rem 0;
+
+                i {
+                    color: var(--themeColor);
+                }
+            }
+
+            p {
+                @include fontStyle(1.6rem, var(--lightColor));
+                line-height: 1.6;
+                padding    : 1rem 0;
+            }
+
+            a {
+                display   : block;
+                padding   : 1rem 0;
+                transition: .2s linear;
+                @include fontStyle(1.6rem, var(--lightColor));
+
+                &:hover i {
+                    padding-right: 1.5rem;
+                }
+
+                i {
+                    color        : var(--themeColor);
+                    padding-right: 1rem;
+                }
+            }
+
+            .share {
+                display: flex;
+
+                a i {
+                    @include fontStyle(2rem, var(--black));
+                    background-color: #ddd;
+                    padding         : 1rem;
+                    margin-right    : 1rem;
+                    border-radius   : .5rem;
+                    
+                    &:hover {
+                        @include hover;
+                    }
+                }
+            }
+
+            .email {
+                width           : 100%;
+                margin          : .7rem 0;
+                padding         : 1rem;
+                border-radius   : .5rem;
+                background-color: #eee;
+                text-transform  : none;
+                @include fontStyle(1.6rem, var(--black));
+            }
+
+            .payment {
+                margin-top: 2rem;
+                height    : 3rem;
+                display   : block;
+            }
+        }
+    }
+
+    .credit {
+        text-align: center;
+        padding   : 2rem 0 1rem;
+        margin-top: 3rem;
+        border-top: var(--border);
+        @include fontStyle(2rem, var(--black));
+
+        span {
+            color: var(--themeColor);
+        }
+    }
+}
+
+// display         : inline-block;
+// height          : 4rem;
+// width           : 4rem;
+// text-align      : center;
+// border-radius   : .5rem;
+// margin-left     : .5rem;
+// background-color: #eee;
+// @include fontStyle(2rem, var(--black));
+
+// &:hover {
+//     @include hover;
+// }

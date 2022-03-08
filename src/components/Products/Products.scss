@@ -3,12 +3,8 @@
 .products {
 
     .product-slider {
-        padding                : 1rem 1rem 4rem;
-        margin-bottom          : 1rem;
-        // &:first-child {
-        //     background-color: red;
-        //     margin-bottom   : 2rem;
-        // }
+        padding      : 1rem 1rem 4rem;
+        margin-bottom: 1rem;
 
         .productBox {
             padding         : 3rem 2rem;
@@ -19,6 +15,7 @@
             background-color: #fff;
             box-shadow      : var(--boxShadow);
             transition      : .2s linear;
+            direction       : ltr;
 
             &:hover {
                 @include outLineHover;

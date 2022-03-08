@@ -1,6 +1,6 @@
 7 Mar 2022
 
-# Grocery Store - React | [Live Link](https://taiseen.github.io/repo-name)
+# Grocery Store - React | [Live Link](https://grocery-store-react-site.netlify.app)
 
 ## Using Tools & Language
 * React
@@ -41,6 +41,6 @@ What challenges did I face & How did I overcome them?
 3. Chrome Developer Tools 
 4. My Past Experiences
 
-Inspire by learning from[.](https://youtu.be/m9xD_raCUGE)
+Inspire by learning from[.](https://youtu.be/lCCN_lkl3Xw)
 
-<img src=""/>
+<img src="https://i.ibb.co/C27jKYf/Grocery-Store-React.jpg"/>

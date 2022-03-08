@@ -4,7 +4,7 @@ import "./Features.scss"
 
 const FeaturesBox = ({ feature: { img, title, para } }) => (
   <div className="featuresBox">
-    <img src={img} alt="" />
+    <img src={img} alt="" title={title} />
     <h3>{title}</h3>
     <p>{para}</p>
     <a href="/#" className="btn">read more</a>

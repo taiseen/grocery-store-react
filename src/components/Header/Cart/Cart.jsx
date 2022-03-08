@@ -6,7 +6,7 @@ import './Cart.scss';
 const CartBox = ({ product: { imgUrl, pName, price, quantity } }) => (
     <div className="box">
         <i className="fas fa-trash"></i>
-        <img src={imgUrl} alt="" />
+        <img src={imgUrl} alt="" title={pName} />
         <div className="content">
             <h3>{pName}</h3>
             <span className="price">{`$${price}/=`}</span>

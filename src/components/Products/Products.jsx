@@ -10,7 +10,7 @@ import 'swiper/scss/navigation';
 
 const ProductBox = ({ product: { img, title, price } }) => (
   <div className="productBox slide-content">
-    <img src={img} alt="" />
+    <img src={img} alt="" title={title} />
     <h3>{title}</h3>
     <div className="price">{`$${price[0]}/- >>> $${price[1]}/-`}</div>
     <div className="stars">
@@ -68,15 +68,6 @@ const Products = () => {
         }
 
       </Swiper>
-
-
-
-
-
-
-
-
-
 
 
 
